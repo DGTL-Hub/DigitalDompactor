@@ -1,0 +1,29 @@
+@mixin glows {
+    font-size: 80px;
+    color: $glow-color-0;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+
+@keyframes glow {
+    from {
+          text-shadow: 0 0 20px $glow-color-0,  
+          0 0 20px              $glow-color-0, 
+          0 0 30px, 0 0 40px    $glow-color-2, 
+          0 0 50px              $glow-color-2, 
+          0 0 70px              $glow-color-2, 
+    }
+    to {
+        text-shadow: 0 0 50px 
+         $glow-color-0,
+         $glow-color-1, 0 0 40px
+         $glow-color-1, 0 0 50px
+         $glow-color-1, 0 0 60px 
+         $glow-color-1, 0 0 70px 
+         $glow-color-1, 0 0 80px
+         $glow-color-1;
+    }
+}

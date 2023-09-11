@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+   
+  }
+    .navbar {        
+        background: $base-colors-dark;
+        display: flex;
+        z-index: 1050;
+        font-size: 20px;
+    ul{
+margin:auto;
+}
+        color: $base-colors-light;
+        li{
+            padding: 1em;
+            display: inline-block;
+            margin-top: 2px;
+            height: 5px;
+            align-items: center;
+            background-color: $secondary-color-green;
+            
+        a {
+        color: base-colors-light;
+        text-decoration: none;
+        padding: 1em;
+        &:hover {
+            text-decoration: underline;
+                }
+            }  
+        }
+    }

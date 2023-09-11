@@ -1,0 +1,32 @@
+// Import your variables or other SCSS files if needed
+@import 'variables';
+
+// Define the cent-gradient mixin
+@mixin cent-gradient {
+    background: radial-gradient(circle, $bg-gradient-color-1, $bg-gradient-color-2);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: pulsate 5s infinite alternate;
+    /* Animation properties */
+}
+
+// Define the keyframes color
+@keyframes color {
+    0% {
+        background-color: #222;
+    }
+    50% {
+        background-color: #4285f4;
+    }
+}
+
+// Apply the cent-gradient mixin to an element
+.my-element {
+    @include cent-gradient;
+}
+
+// Apply the color keyframes animation to another element
+.another-element {
+    animation: color 5s infinite alternate;
+}
