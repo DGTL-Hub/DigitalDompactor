@@ -6,6 +6,8 @@ h1 {
 
 body {
     height: 100vh;
-    background: radial-gradient(circle, $bg-gradient-color-1 0%, $bg-gradient-color-2 100%);
-}
+    background: radial-gradient(circle,
+     $bg-gradient-color-1 0%, 
+     $bg-gradient-color-2 100%
+     );}
 

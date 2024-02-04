@@ -1,5 +1,5 @@
 
-// Flexbox Containers
+// Flexbox Containers with optional fallbacks for older browsers.
 @mixin flexbox {
 	display: -webkit-box;
 	display: -webkit-flex;
