@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Define a CSS variable for the rotation angle */
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+/* Style for the logo thumbnail */
+.thumbnail {
+  position: relative;
+  width: 50%; /* Adjust the size as needed */
+  height: auto; /* Keep the aspect ratio */
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  filter: brightness(1.2); /* Increase brightness by 20% by default */
+  transition: filter 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Add hover styles for the glow effect */
+.thumbnail:hover {
+  filter: brightness(1.5); /* Increase brightness by 50% on hover */
+  transform: scale(1.1); /* Slightly increase size on hover */
+  box-shadow: 0 0 20px rgba(88, 199, 250, 0.7); /* Add outer glow effect */
+  transition: filter 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Pseudo-element for the glow effect */
+.thumbnail::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  opacity: 0;
+  transform: scale(1.2); /* Increase size for the glow effect */
+  z-index: -1;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Apply the glow effect on hover */
+.thumbnail:hover::before {
+  opacity: 1;
+  transform: scale(1.4); /* Increase size for the glow effect on hover */
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Add a rotation animation */
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+.glow {
+  background: radial-gradient(circle at 100%, #00ff2a, #d9ff00 50%, #ff3300 75%, #ffffff 75%);
+  font-weight: 600;
+  background-size: 200% auto;
+  color: #000;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animatedTextGradient 1.5s linear infinite;
+}
+
+@keyframes animatedTextGradient {
+  to {
+    background-position: 200% center;
+  }
+}/*# sourceMappingURL=globals.css.map */

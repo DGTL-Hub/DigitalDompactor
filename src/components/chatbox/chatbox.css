@@ -1,0 +1,54 @@
+#chatbox {
+    position: fixed; /* Fixed positioning to stay in place */
+    bottom: 02.5rem; /* Align to the bottom of the page */
+    right: 2.5rem; /* Align to the right of the page */
+    background-color: hsl(49, 18%, 36%, .4); /* Semi-transparent background */
+    border-top-right-radius: 10px; 
+    border-top-left-radius: 10px;
+    z-index: 1000;
+}
+
+
+
+#chatbox {
+    margin-top: 2rem;
+    drop-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a drop shadow */
+
+}
+
+#chatbox-header {
+    background-color: hsl(30,13%,6%);
+    padding: 10px;
+    border-top-right-radius: 10px; /* Respect the rounded corner */
+    border-top-left-radius: 10px; /* Respect the rounded corner */
+}
+
+#chatbox-body {
+    padding: 10px;
+    height: 300px; /* Adjust based on total height */
+    overflow-y: auto; /* Enable scrolling for overflow */
+    drop-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a drop shadow */
+}
+
+#chatbox-footer {
+    padding: 10px;
+}
+
+#chatbox-footer input {
+    width: calc(100% - 60px); /* Input width, accounting for button */
+    padding: 5px;
+}
+
+#chatbox-footer button {
+    width: 50px;
+    margin-left: 5px;
+    background-color:hsl(30,13%,6%);
+}
+
+button {
+    color:  hsl(49,18%,36%);
+    border: none; /* Remove the border */
+    padding: 5px; /* Add padding */
+    cursor: pointer; /* Add a pointer cursor */
+    border-radius: 5px; /* Add rounded corners */
+}

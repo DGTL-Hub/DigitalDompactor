@@ -1,0 +1,28 @@
+
+  .control-button-light,
+  .control-button-dark {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .control-button-light > svg > circle {
+    fill: rgba(255,255,255,1.0);
+    stroke: rgba(0,0,0,1.0);
+    stroke-width: 2px;
+    transform: rotate(30);
+  }
+  
+  .control-button-light > svg > rect {
+    fill: rgba(0,0,0,1.0);
+  }
+  
+  .control-button-dark > svg > circle {
+    fill: rgba(0,0,0,1.0);
+    stroke: rgba(255,255,255,1.0);
+    stroke-width: 2px;
+  }
+  
+  .control-button-dark > svg > rect {
+    fill: rgba(255,255,255,1.0);
+  }

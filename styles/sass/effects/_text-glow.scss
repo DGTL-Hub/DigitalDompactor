@@ -1,0 +1,21 @@
+.glow {
+    background: radial-gradient(
+      circle at 100%,
+      #00ff2a,
+      #d9ff00 50%,
+      #ff3300 75%,
+      #ffffff 75%
+    );
+    font-weight: 600;
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animatedTextGradient 1.5s linear infinite;
+  }
+  
+  @keyframes animatedTextGradient {
+    to {
+      background-position: 200% center;
+    }
+  }
